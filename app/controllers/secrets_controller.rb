@@ -5,7 +5,7 @@ class SecretsController < ApplicationController
         render json: SecretSerializer.new(secrets)
     end
 
-    def showx
+    def show
         secret = Secret.find(params[:id])
         options = {
             include: [:secrets]
