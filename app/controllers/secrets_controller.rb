@@ -1,11 +1,11 @@
 class SecretsController < ApplicationController
     
     def index
-        secret = Secret.all
-        render json: secret.to_json(:include => :secrets)
+        secrets = Secret.all
+        render json: SecretSerializer.new(secrets)
     end
 
-    def show
+    def showx
         secret = Secret.find(params[:id])
         options = {
             include: [:secrets]
