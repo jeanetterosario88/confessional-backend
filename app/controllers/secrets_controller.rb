@@ -9,16 +9,13 @@ class SecretsController < ApplicationController
 
     def show
         secret = Secret.find(params[:id])
-        options = {
-            include: [:secrets]
-        }
-        render json: SecretSerializer.new(secret, options)
+        render json: secret.to_json(:include => :comments)
     end
 
     def create
         secret = Secret.new(secret_params)
         if secret.save
-            render json: SecretSerializer.new(secret)
+            render json: secret.to_json(:include => :comments)
         else
             render json: {errors: secret.errors.full_messages}
         end
