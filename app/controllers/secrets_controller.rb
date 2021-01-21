@@ -2,7 +2,6 @@ class SecretsController < ApplicationController
     
     def index
         secrets = Secret.all
-        # render json: SecretSerializer.new(secrets)
         render json: secrets.to_json(:include => :comments)
         
     end
