@@ -42,14 +42,16 @@ For interactive console
     $ rails console
 
 
-For the fronthead, head to the Github to fork and clone:
+For the frontend, head to the following Github link to fork and clone:
 https://github.com/jeanetterosario88/confessional.git
-
-    
 
 ## CONTRIBUTING
 
 Bug reports and pull requests are welcome on GitHub https://github.com/jeanetterosario88/confessional-backend.git Contributors are expected to adhere to the Contributor Covenant code of conduct.
+
+## LICENSE
+
+The project is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 
 # confessional-backend
